@@ -12,7 +12,7 @@ const feedbackRoutes = require('./routes/feedbackRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const userProfileRoutes = require('./routes/userProfileRoutes');
 const syncRoutes = require('./routes/syncRoutes');
-
+const adminRoutes = require('./routes/adminRoutes');
 
 
 const corsOptions = {
@@ -50,6 +50,8 @@ app.use('/api/feedback', feedbackRoutes);
 app.use('/api/notifications', notificationRoutes); 
 app.use('/api/profile', userProfileRoutes);
 app.use('/api/sync', syncRoutes);
+app.use('/api/admin', adminRoutes);
+
 app.use('/api/auth/login', loginLimiter);
 app.use(cors(corsOptions));
 app.use(helmet());
